@@ -9,14 +9,16 @@ import {
 import './App.css';
 import Headers from './header/header.js'
 import Bottom from './bottom.js'
-import In from './In.js'
+import EventsContainer from './containers/EventsContainer'
+import BottomContainer from './containers/BottomContainer'
 
 class FirstPage extends Component{
   render() {
     return(
         <div className="Apper">
           <Headers className='App-head'/>
-          <Bottom className='App-bottom'/>
+          <BottomContainer className='App-bottom'/>
+          <EventsContainer />
         </div>
     )
   }
@@ -27,9 +29,8 @@ class App extends Component {
     return (
       <Router>
         <div>
-
           <Route exact path="/" component={FirstPage}/>
-          <Route path="/logged-in" component={In}/>
+          <Route path="/events" component={EventsContainer}/>
         </div>
       </Router>
     );

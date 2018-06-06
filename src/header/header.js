@@ -18,7 +18,7 @@ export default class Headers extends React.Component{
                 </div>
                 <p/>
                 <div>
-                <Passwordfield className = "password-field" />
+                <Passwordfield />
                 </div>
             </div>
         </div>

@@ -12,7 +12,7 @@ export default class Bottom extends React.Component{
         return(
             <div>
                 <button type="button">
-                    <Link className={cls(this.props.className, "login-button")}  to="/logged-in"> SIGN IN </Link>
+                    <Link className={cls(this.props.className, "login-button")}  to="/events" onClick={this.props.onClick}> SIGN IN </Link>
                 </button>
             </div>
         )
