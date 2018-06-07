@@ -3,12 +3,10 @@ import React, { Component } from 'react';
 import {
   BrowserRouter as Router,
   Route,
-  Link
 } from 'react-router-dom'
 
 import './App.css';
 import Headers from './header/header.js'
-import Bottom from './bottom.js'
 import EventsContainer from './containers/EventsContainer'
 import BottomContainer from './containers/BottomContainer'
 
@@ -18,7 +16,6 @@ class FirstPage extends Component{
         <div className="Apper">
           <Headers className='App-head'/>
           <BottomContainer className='App-bottom'/>
-          <EventsContainer />
         </div>
     )
   }

@@ -1,6 +1,5 @@
 import {connect} from 'react-redux'
 import Bottom from '../bottom'
-import {userLogin} from '../actions.js'
 
 const mapStateToProps = (state) => {
     //console.log(state.DEFAULT_USER)
@@ -9,17 +8,8 @@ const mapStateToProps = (state) => {
     }
 }
 
-const mapDispatchToProps = dispach => {
-    return{
-        onClick: () => {
-            dispach(userLogin())
-        }
-    }
-}
-
 const BottomContainer = connect(
     mapStateToProps,
-    mapDispatchToProps
 )(Bottom)
 
 export default BottomContainer

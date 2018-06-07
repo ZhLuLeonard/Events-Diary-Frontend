@@ -3,7 +3,6 @@ import cls from 'classnames';
 
 export default class Password extends React.Component {
 	render () {
-        const logoSource = this.props.logo;
 		return (
 			<div>
 				<input

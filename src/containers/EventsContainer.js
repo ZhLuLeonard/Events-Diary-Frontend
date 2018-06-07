@@ -1,14 +1,15 @@
 import {connect} from 'react-redux'
 import Events from '../Events'
+import {userLogin} from '../actions.js'
 
 const mapStateToProps = (state) => {
     return{
-        text: state.DEFAULT_USER
+        text: state.USER_NAME
     }
 }
 
 const EventsContainer = connect(
-    mapStateToProps
+    mapStateToProps,
 )(Events)
 
 export default EventsContainer

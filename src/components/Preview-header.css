@@ -1,0 +1,27 @@
+.preview-header1 {
+    position: relative;
+    top: 0px;
+    padding-left: 10px;
+    padding-right: 10px;
+    width: 320px
+}
+.userIcon2 {
+    height: 20px;
+    position: relative;
+    left: 0px;
+    top: 10px;
+}
+
+.previewUsername {
+    position: absolute;
+    left: 40px;
+    top: 5px;
+    font-size: 10px;
+    color: black
+}
+
+.channelName {
+    position: absolute;
+    right: 34px;
+    top: 14px;
+}

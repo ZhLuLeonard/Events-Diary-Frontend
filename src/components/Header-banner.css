@@ -1,0 +1,26 @@
+.header_banner {
+    height:35px;
+    width: 320px;
+    background: #8560A9;
+}
+.searchIcon {
+    height: 25px;
+    position: absolute;
+    left: 10px;
+    top: 5px;
+}
+
+.logoCat {
+    height: 25px;
+    position: absolute;
+    left: 150px;
+    top: 5px;
+    fill: #D5EF7F;
+}
+
+.userIcon {
+    height: 25px;
+    position: absolute;
+    left: 280px;
+    top: 5px;
+}

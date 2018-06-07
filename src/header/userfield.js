@@ -1,11 +1,7 @@
 import React from 'react';
-import Username from './username.js';
 import CustomerUserName from '../containers/UserLinkingField'
 
 export default class Userfield extends React.Component{
-    constructor(props){
-        super(props);
-    }
     render(){
         return(
             <div className="user-field">

@@ -1,15 +1,15 @@
 import { connect } from 'react-redux'
 import { Icon } from '../components/Icon'
+import clas from 'classnames'
 
 const changeUsernameToDirectory = (userName) => {
-    link = "/icons/"+userName+".png";
-    return link;
+    return "/icons/"+userName+".png";
 }
 
-const mapStateToProps = state => {
+const mapStateToProps = (state,ownprops) => {
     return{
-        userIconSrc: changeUsernameToDirectory(state.DEFAULT_USER),
-        className: state.DEFAULT_USER+"Icon"
+        userIconSrc: changeUsernameToDirectory(state.USER_NAME),
+        className: clas(ownprops.className, state.USER_NAME+"Icon")
     }
 }
 

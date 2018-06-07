@@ -2,5 +2,7 @@ import React from 'react'
 import clas from 'classnames'
 
 const Icon = ({userIconSrc, className}) => (
-    <img className={clas(className)} src={userIconSrc} />
+    <img className={className} src={userIconSrc} style={{border:'white', 'border-radius':'50%'}}/>
 )
+
+export {Icon};
