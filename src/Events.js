@@ -7,7 +7,8 @@ export default class Events extends React.Component{
       return(
         <div>
           <Headerbannder />
-          <PreviewListContainer />  
+          <PreviewListContainer />
+          <div>{this.props.children}</div>  
         </div>
       )
     }

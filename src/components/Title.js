@@ -4,7 +4,7 @@ import clas from 'classnames'
 var titlestyle = {
     "padding-top": "12px",
     'padding-left': '10px',
-    'font-size': '20px',
+    'font-size': '18px',
     'width': '280px',
     "color": "#453257"
 }

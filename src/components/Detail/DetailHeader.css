@@ -1,0 +1,49 @@
+.detailHeader {
+    position: absolute;
+    height: 180px;
+}
+
+.detailChannel  {
+    position: absolute;
+    margin-left: 15px;
+    margin-top: 15px;
+}
+
+.detailTitle {
+    position: relative;
+    margin-top: 34px;
+    margin-left: 8px;
+    padding-bottom: 4px;
+}
+
+.detailUser {
+    position: relative;
+    padding-bottom: 4px;
+}
+
+.detailDivider {
+    position: relative;
+}
+
+.buttonTable {
+    width: 320px;
+    padding-left: 10px;
+}
+
+.detailsButton {
+    background: transparent;
+    width: 100px;
+    border:none;
+}
+
+.participantsButton {
+    background: transparent;
+    width:100px;
+    border:none
+}
+
+.commentsButton {
+    background: transparent;
+    width: 100px;
+    border:none
+}

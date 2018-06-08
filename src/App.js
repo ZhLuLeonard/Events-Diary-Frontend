@@ -3,12 +3,14 @@ import React, { Component } from 'react';
 import {
   BrowserRouter as Router,
   Route,
+  Switch
 } from 'react-router-dom'
 
 import './App.css';
 import Headers from './header/header.js'
 import EventsContainer from './containers/EventsContainer'
 import BottomContainer from './containers/BottomContainer'
+import Detail from './components/Detail/Detail'
 
 class FirstPage extends Component{
   render() {
@@ -26,8 +28,12 @@ class App extends Component {
     return (
       <Router>
         <div>
+          <Switch>
           <Route exact path="/" component={FirstPage}/>
-          <Route path="/events" component={EventsContainer}/>
+          <Route exact path="/events" component={EventsContainer}/>
+          {this.props.events.map((event,index) =>
+          (<Route key={index} path={`/eventsdetail/${index}`} render={(props)=> <Detail index={index} {...props}/>}/>))}
+          </Switch>
         </div>
       </Router>
     );

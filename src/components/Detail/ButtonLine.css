@@ -1,0 +1,68 @@
+.buttonLine {
+    position: absolute;
+    height: 30px;
+}
+
+.timeImage {
+    position: absolute;
+    left: 15px;
+    fill: #AECB4F;
+}
+
+.peopleImage {
+    position: absolute;
+    left: 100px;
+}
+
+.messageImage {
+    position: absolute;
+    left: 220px;
+}
+
+.details {
+    position: absolute;
+    left: 40px;
+    color:#AECB4F;
+    font-size: 13px;
+}
+
+.participants {
+    position: absolute;
+    left: 130px;
+    font-size: 13px;
+}
+
+.comments {
+    position: absolute;
+    left: 243px;
+    font-size: 13px;
+}
+
+.divider1 {
+    position: absolute;
+    margin-top: 2px;
+    left:90px;
+    height: 15px;
+    width: 1px;
+    background: #DFDFDF;
+    border:none;
+}
+
+.divider2 {
+    position: absolute;
+    left:209px;
+    margin-top: 2px;
+    height: 15px;
+    width: 1px;
+    background: #DFDFDF;
+    border:none;
+}
+
+.divider3 {
+    position: absolute;
+    height: 1px;
+    margin-top: 27px;
+    width: 320px;
+    background: #DFDFDF;
+    border:none;
+}

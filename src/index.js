@@ -5,7 +5,7 @@ import { Provider } from 'react-redux'
 import { createStore } from 'redux'
 import combineReducers from './reducers.js'
 import './index.css';
-import App from './App';
+import AppContainer from './containers/AppContainer';
 import { loadState, saveState } from './middleware/localStorage'
 import registerServiceWorker from './registerServiceWorker';
 import {event1, event2} from './Abstract/Mock'
@@ -22,7 +22,7 @@ store.subscribe(() => {
 
 ReactDOM.render(
     <Provider store = {store}>
-        <App />
+        <AppContainer />
     </Provider>, 
     document.getElementById('root')
 );

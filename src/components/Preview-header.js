@@ -9,7 +9,6 @@ const changeUsernameToDirectory = (userName) => {
 
 export default class Preview_header extends React.Component {
     render(){
-        console.log(changeUsernameToDirectory(this.props.userName))
         return(
         <div className="preview-header1">
             <Icon className = "userIcon2" userIconSrc={changeUsernameToDirectory(this.props.userName)}/>
