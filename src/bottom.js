@@ -11,8 +11,8 @@ export default class Bottom extends React.Component{
     render(){
         return(
             <div>
-                <button type="button">
-                    <Link className={cls(this.props.className, "login-button")}  to="/events" onClick={this.props.onClick}> SIGN IN </Link>
+                <button type="button" onClick={this.props.onClick}>
+                    <Link className={cls(this.props.className, "login-button")}  to="/events" onClick={(e) => this.props.onClick}> SIGN IN </Link>
                 </button>
             </div>
         )

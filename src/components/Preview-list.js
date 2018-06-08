@@ -5,10 +5,13 @@ class Preview_list extends React.Component{
     render(){
     return (
     <div>
-        <Preview />
+        {this.props.eventlist.map((event,index) =>
+            (<Preview index={index}/>))
+        }
     </div>
     )
     }
 }
+
 
 export default Preview_list;

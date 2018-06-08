@@ -1,3 +1,5 @@
+import {event1,event2} from '../Abstract/Mock'
+
 export const loadState = () => {
     try{
         const serializedState = localStorage.getItem('state');
@@ -5,7 +7,8 @@ export const loadState = () => {
             console.log("null")
             return undefined;
         }
-        return JSON.parse(serializedState);
+        var state = JSON.parse(serializedState);
+        return state;
     }
     catch(err){
         return undefined;

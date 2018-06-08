@@ -3,25 +3,26 @@
     top: 0px;
     padding-left: 10px;
     padding-right: 10px;
-    width: 320px
+    width: 320px;
+    height: 40px;
 }
 .userIcon2 {
     height: 20px;
-    position: relative;
-    left: 0px;
-    top: 10px;
+    position: absolute;
+    left: 10px;
+    top: 17px;
 }
 
 .previewUsername {
     position: absolute;
     left: 40px;
-    top: 5px;
-    font-size: 10px;
+    top: 8px;
+    font-size: 12px;
     color: black
 }
 
 .channelName {
     position: absolute;
     right: 34px;
-    top: 14px;
+    top: 17px;
 }

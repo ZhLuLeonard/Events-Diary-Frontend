@@ -2,13 +2,14 @@ import React from 'react'
 import clas from 'classnames'
 
 var channelBox = {
-    'border-radius': '50px',
-    'border': 'solid 1px #8560A9',
-    'font-size': '10px',
+    'borderRadius': '50px',
+    'border': 'solid 1px #D3C1E5',
+    'font-size': '12px',
     'text-align': 'center',
-    'padding-left':'5px',
-    'padding-right': '5px',
-    'padding-bottom': '2px'
+    'padding-left':'7px',
+    'padding-right': '7px',
+    'padding-bottom': '2px',
+    "padding-top":"2px"
 }
 
 export default class ChannelName extends React.Component {

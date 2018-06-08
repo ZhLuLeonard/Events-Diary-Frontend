@@ -1,15 +1,20 @@
 import React from 'react'
-import CustomerIcon from '../containers/CustomerIcon.js'
-import ChannelName from './ChannelName.js'
+import {Icon} from '../components/Icon.js'
+import ChannelNameContainer from '../containers/ChannelNameContainer'
 import './Preview-header.css'
+
+const changeUsernameToDirectory = (userName) => {
+    return "/icons/"+userName+".png";
+}
 
 export default class Preview_header extends React.Component {
     render(){
+        console.log(changeUsernameToDirectory(this.props.userName))
         return(
         <div className="preview-header1">
-            <CustomerIcon className = "userIcon2"/>
+            <Icon className = "userIcon2" userIconSrc={changeUsernameToDirectory(this.props.userName)}/>
             <p className = "previewUsername"> {this.props.userName} </p>
-            <ChannelName className = "channelName" channelName="This is a very long channel name"/>
+            <ChannelNameContainer className = "channelName" index={this.props.index}/>
         </div>
         )
     }

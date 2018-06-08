@@ -2,9 +2,11 @@ import React from 'react'
 import clas from 'classnames'
 
 var titlestyle = {
-    'padding': '10px',
+    "padding-top": "12px",
+    'padding-left': '10px',
     'font-size': '20px',
-    'width': '280px'
+    'width': '280px',
+    "color": "#453257"
 }
 
 class Title extends React.Component{
