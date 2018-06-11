@@ -1,0 +1,88 @@
+.marker1 {
+    position: relative;
+    height: 1px;
+    width: 300px;
+    background: #DFDFDF;
+    border:none;
+}
+
+.marker2 {
+    position: absolute;
+    margin-top: 2px;
+    left:13px;
+    height: 20px;
+    width: 4px;
+    background: #8560A9;
+    border-radius:4px;
+    border: none;
+}
+
+.when {
+    font-size: 18px;
+    color: #8560A9;
+    position: relative;
+    left:22px;
+    top: 2px;
+}
+
+.image1{
+    height: 18px;
+    fill: #D5EF7F;
+    position: absolute;
+    top: 1px;
+}
+
+.startDate {
+    font-size: 18px;
+    position: relative;
+    left: 25px;
+}
+
+.image2 {
+    height: 18px;
+    fill: #D5EF7F;
+    position: absolute;
+    top: 1px;
+}
+
+
+.endDate {
+    font-size: 18px;
+    position: relative;
+    left: 25px;
+}
+
+.marker3 {
+    position: absolute;
+    top: 0px;
+    left:160px;
+    height: 80px;
+    width: 1px;
+    background: #DFDFDF;
+    border-radius:4px;
+    border: none;
+}
+
+.startTime {
+    position: absolute;
+    left: 55px;
+    top: 50px;
+    color: #AECB4F;
+    font-size: 30px;
+}
+
+.apm {
+    position: absolute;
+    left: 122px;
+    top: 65px;
+    color: #AECB4F;
+    font-size: 15px;
+}
+
+.marker4 {
+    position: relative;
+    background: #DFDFDF;
+    border:none;
+    height: 1px;
+    width: 300px;
+}

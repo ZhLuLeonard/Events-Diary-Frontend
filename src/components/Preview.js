@@ -15,7 +15,6 @@ import PreviewHeaderContainer from '../containers/Preview-header-container';
 import Detail from './Detail/Detail'
 
 var previewStyle = {
-    "height": "245px",
     "position": "relative",
 }
 
@@ -23,6 +22,7 @@ var dividerStyle = {
     "width": "310px",
     "background-color": "#D3C1E5"
 }
+
 
 export default class Preview extends React.Component{
     render(){

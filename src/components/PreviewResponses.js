@@ -1,17 +1,17 @@
 import React from 'react'
-import Going from './Going.js'
+import GoingContainer from '../containers/GoingContainer'
 import Like from './Like'
 
 var responseLineStyle = {
-    "padding-top": "5px",
-    "padding-bottom": "20px"
+    "padding-top": "20px",
+    "padding-bottom": "20px",
 }
 
 class PreviewResponses extends React.Component {
     render(){
         return(
             <div style={responseLineStyle}>
-                <Going goingText="I am going" />
+                <GoingContainer index={this.props.index} />
                 <Like likeText="I like it" />
             </div>
         )

@@ -2,6 +2,7 @@
     height:35px;
     width: 320px;
     background: #8560A9;
+    position: relative;
 }
 .searchIcon {
     height: 25px;

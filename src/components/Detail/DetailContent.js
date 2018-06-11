@@ -1,11 +1,11 @@
 import React from 'react'
 
 var style = {
-    "padding": "15px",
+    "paddingLeft": "15px", 
+    "paddingTop":"0px",
     "font-size": "15px",
-    "height": "100px",
-    "top": "200px",
-    "position":"absolute"
+    "position":"relative",
+    "width": "290px"
 }
 
 class DetailContent extends React.Component {

@@ -4,7 +4,9 @@ import clas from 'classnames'
 var textStyle = {
     'width': '300px',
     'font-size': '15px',
-    'padding': '10px',
+    'paddingLeft': '10px',
+    'paddingTop':"10px",
+    "paddingRight":"10px",
     'color': '#67616D'
 }
 

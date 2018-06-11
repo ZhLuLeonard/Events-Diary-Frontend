@@ -1,6 +1,7 @@
 export const TYPE_USERNAME =  'TYPE_USERNAME'
 export const ADD_EVENT = 'ADD_EVENT'
 export const USER_LOGIN = "USER_LOGIN"
+export const ADD_GOING = "ADD_GOING"
 
 export function userSetup(username){
     return { type: TYPE_USERNAME, username }
@@ -12,4 +13,8 @@ export function addEvent(event){
 
 export function userLogin(){
     return {type: USER_LOGIN}
+}
+
+export function addGoing(event){
+    return {type: ADD_GOING, event}
 }

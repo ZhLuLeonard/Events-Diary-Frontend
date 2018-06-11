@@ -1,10 +1,11 @@
 import React from 'react'
 
 class Event {
-    constructor(Info, Content, User){
+    constructor(Info, Content, User, pictureList){
         this.Info = Info;
         this.Content = Content;
         this.User = User;
+        this.pictureList = pictureList;
     }
     likes = [];
     goings = [];

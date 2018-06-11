@@ -1,0 +1,53 @@
+.markerWhere {
+    position: absolute;
+    margin-top: 2px;
+    left:13px;
+    height: 20px;
+    width: 4px;
+    background: #8560A9;
+    border-radius:4px;
+    border: none;
+}
+
+.where {
+    font-size: 18px;
+    color: #8560A9;
+    position: relative;
+    left:22px;
+    top: 2px;
+}
+
+.addressName {
+    font-size: 18px;
+    font-weight: bold;
+    position: relative;
+    left: 13px;
+    top: 10px;
+    color: #453257
+}
+
+.address {
+    font-size:18px;
+    position: relative;
+    left: 13px;
+    top: 12px;
+    color: #67616D;
+}
+
+.gMap {
+    height: 80px;
+    width: 295px;
+    border-radius: 10px;
+    left: 13px;
+    position: relative;
+    top: 20px;
+}
+
+.markerEndWhere {
+    position: relative;
+    background: #DFDFDF;
+    border:none;
+    height: 1px;
+    width: 300px;
+    top: 19px;
+}

@@ -1,5 +1,6 @@
 import { connect } from 'react-redux'
 import Going from '../components/Going.js'
+import { addGoing } from '../actions'
 
 function isGoing (list,event) {
     return (list.indexOf(event)!=-1)
@@ -7,13 +8,20 @@ function isGoing (list,event) {
 
 const mapStateToProps = (state,ownprops) => {
     return{
-        isGoing: isGoing(state.DEFAULT_USER.goings,state.EVENTS_ARRAY[ownprops.index]),
-        numberGoing: state.DEFAULT_USER.goings.length()
+        isGoing: isGoing(state.USERS_ARRAY[state.DEFAULT_USER].goings,ownprops.index),
+        numberGoing: state.USERS_ARRAY[state.DEFAULT_USER].goings.length
+    }
+}
+
+const mapDispatchToProps = (dispatch,ownprops) => {
+    return {
+        onClick: () => {console.log("hi");dispatch(addGoing(ownprops.index))}
     }
 }
 
 const GoingContainer = connect(
-    mapStateToProps
+    mapStateToProps,
+    mapDispatchToProps
 )(Going)
 
 export default GoingContainer
