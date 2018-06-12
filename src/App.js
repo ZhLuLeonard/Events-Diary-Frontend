@@ -25,14 +25,19 @@ class FirstPage extends Component{
 
 class App extends Component {
   render() {
+    var routes = []
+    for (var i=0; i<this.props.events.size; i++) {
+      console.log(i)
+      routes.push(i)
+    }
+    console.log({routes})
     return (
       <Router>
         <div>
           <Switch>
           <Route exact path="/" component={FirstPage}/>
           <Route exact path="/events" component={EventsContainer}/>
-          {this.props.events.map((event,index) =>
-          (<Route key={index} path={`/eventsdetail/${index}`} render={(props)=> <Detail index={index} {...props}/>}/>))}
+          {routes.map( i => <Route key={i} path={`/eventsdetail/${i}`} render={() => (<Detail index={i} />)}/>)}
           </Switch>
         </div>
       </Router>

@@ -1,7 +1,7 @@
 import React from 'react'
 
 var textStyle = {
-    "font-size": "12px",
+    "fontSize": "12px",
     "position": "absolute",
     "left": "130px",
     "color": "#453257"
@@ -10,7 +10,7 @@ var textStyle = {
 var logoStyle = {
     "position": "absolute",
     "left": "110px",
-    "padding-top": "1px"
+    "paddingTop": "1px"
 }
 
 class Like extends React.Component {

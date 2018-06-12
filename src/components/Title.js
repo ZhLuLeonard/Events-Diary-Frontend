@@ -2,9 +2,9 @@ import React from 'react'
 import clas from 'classnames'
 
 var titlestyle = {
-    "padding-top": "12px",
-    'padding-left': '10px',
-    'font-size': '18px',
+    "paddingTop": "12px",
+    'paddingLeft': '10px',
+    'fontSize': '18px',
     'width': '280px',
     "color": "#453257",
     "fontWeight":"bold"

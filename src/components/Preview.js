@@ -20,7 +20,7 @@ var previewStyle = {
 
 var dividerStyle = {
     "width": "310px",
-    "background-color": "#D3C1E5"
+    "backgroundColor": "#D3C1E5"
 }
 
 
@@ -30,7 +30,7 @@ export default class Preview extends React.Component{
         <div style={previewStyle}>    
             <PreviewHeaderContainer className = "leonardHeader" index={this.props.index}/>
             
-            <Link to={`eventsdetail/${this.props.index}`} style={{"text-decoration": "none"}}> 
+            <Link to={`eventsdetail/${this.props.index}`} style={{"textDecoration": "none"}}> 
             <span style={{"display": "block"}}>
             <TitleContainer className = "previewTitle" index={this.props.index}/>
             <DatelineContainer index={this.props.index}/>

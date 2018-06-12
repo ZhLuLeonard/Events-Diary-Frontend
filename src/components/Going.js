@@ -1,21 +1,21 @@
 import React from 'react'
 
 var textStyle = {
-    "font-size": "12px",
+    "fontSize": "12px",
     "color": "#453257",
     "position": "absolute",
-    "padding-left": "17px",
+    "paddingLeft": "17px",
 }
 
 var goingStyle = {
-    "padding-left": "10px",
+    "paddingLeft": "10px",
 }
 
 var logoStyle = {
     "position": "absolute",
     "height": "12px",
     "fill": "#AECB4F",
-    "padding-top":"1px"
+    "paddingTop":"1px"
 }
 
 class Going extends React.Component {

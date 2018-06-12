@@ -3,8 +3,8 @@ import GoingContainer from '../containers/GoingContainer'
 import Like from './Like'
 
 var responseLineStyle = {
-    "padding-top": "20px",
-    "padding-bottom": "20px",
+    "paddingTop": "20px",
+    "paddingBottom": "20px",
 }
 
 class PreviewResponses extends React.Component {

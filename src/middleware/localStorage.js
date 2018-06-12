@@ -1,4 +1,5 @@
 import {event1,event2} from '../Abstract/Mock'
+import { fromJS } from 'immutable'
 
 export const loadState = () => {
     try{
@@ -8,7 +9,8 @@ export const loadState = () => {
             return undefined;
         }
         var state = JSON.parse(serializedState);
-        return state;
+        var immstate = fromJS(state);
+        return immstate;
     }
     catch(err){
         return undefined;

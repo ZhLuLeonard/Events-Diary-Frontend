@@ -3,7 +3,7 @@ import ChannelName from '../components/ChannelName'
 
 const mapStateToProps = (state,ownprops) => {
     return{
-        channelName: state.EVENTS_ARRAY[ownprops.index].Info.Channel_name
+        channelName: state.getIn(["EVENTS_ARRAY", ownprops.index,"Info","Channel_name"])
     }
 }
 

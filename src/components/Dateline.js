@@ -2,21 +2,21 @@ import React from 'react'
 
 var styleLogo= {
     'height': '12px',
-    "padding-right": "5px",
-    "margin-top": "1px",
+    "paddingRight": "5px",
+    "marginTop": "1px",
     "position": "absolute"
 }
 var styleDateline = {
     'height': '15px',
-    "margin-top": "10px",
-    "padding-left": "10px"
+    "marginTop": "10px",
+    "paddingLeft": "10px"
 }
 var styleText = {
-    "font-size": "12px",
+    "fontSize": "12px",
     'color': '#8560A9',
-    "margin-bottom": "0px",
+    "marginBottom": "0px",
     "position": "absolute",
-    "padding-left": "20px"
+    "paddingLeft": "20px"
 }
 
 export default class Dateline extends React.Component {

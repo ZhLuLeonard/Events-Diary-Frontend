@@ -18,6 +18,7 @@ var biggerStyle = {
 
 export default class Detail extends React.Component{
     render(){
+        console.log(this.props.index)
         return (
             <div className={clas(this.props.className)}>
                 <Headerbanner />

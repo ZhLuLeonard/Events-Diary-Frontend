@@ -5,7 +5,7 @@ import Usernames from '../header/username.js';
 const mapStateToProps = (state) => {
     return{
         className: "user-name",
-        value: state.USER_NAME
+        value: state["USER_NAME"]
     }
 }
 

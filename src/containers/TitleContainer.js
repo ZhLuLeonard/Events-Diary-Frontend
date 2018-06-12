@@ -3,7 +3,7 @@ import Title from '../components/Title'
 
 const mapStateToProps = (state,ownprops) => {
     return {
-        title: state.EVENTS_ARRAY[ownprops.index].Content.Title,
+        title: state.getIn(["EVENTS_ARRAY", ownprops.index,"Content","Title"])
     }
 }
 

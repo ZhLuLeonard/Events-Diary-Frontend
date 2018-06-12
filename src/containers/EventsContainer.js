@@ -4,7 +4,7 @@ import {userLogin} from '../actions.js'
 
 const mapStateToProps = (state) => {
     return{
-        text: state.USER_NAME
+        text: state.get("USER_NAME")
     }
 }
 

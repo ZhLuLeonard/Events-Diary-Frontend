@@ -3,7 +3,7 @@ import Preview_list from '../components/Preview-list.js'
 
 const mapStateToProps = (state) => {
     return{
-        eventlist: state.EVENTS_ARRAY
+        eventlist: state.get("EVENTS_ARRAY")
     }
 }
 

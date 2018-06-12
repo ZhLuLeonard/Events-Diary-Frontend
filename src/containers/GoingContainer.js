@@ -7,9 +7,13 @@ function isGoing (list,event) {
 }
 
 const mapStateToProps = (state,ownprops) => {
+    //console.log(state.get("EVENTS_ARRAY"))
+    //console.log(ownprops.index)
+    //console.log(state.getIn(["EVENTS_ARRAY", ownprops.index]))
+    var goingsList = state.getIn(["USERS_ARRAY",state.get("DEFAULT_USER"),"goings"]);
     return{
-        isGoing: isGoing(state.USERS_ARRAY[state.DEFAULT_USER].goings,ownprops.index),
-        numberGoing: state.USERS_ARRAY[state.DEFAULT_USER].goings.length
+        isGoing: goingsList.indexOf(ownprops.index),
+        numberGoing: state.getIn(["EVENTS_ARRAY",ownprops.index,"goings"]).size
     }
 }
 

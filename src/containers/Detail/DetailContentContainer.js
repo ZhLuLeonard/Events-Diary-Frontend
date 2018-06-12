@@ -3,7 +3,7 @@ import DetailContent from '../../components/Detail/DetailContent'
 
 const mapStateToProps = (state,ownprops) => {
     return{
-        content: state.EVENTS_ARRAY[ownprops.index].Content.Text
+        content: state.getIn(["EVENTS_ARRAY", ownprops.index,"Content","Text"])
     }
 }
 
