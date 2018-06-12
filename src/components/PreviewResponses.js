@@ -1,6 +1,7 @@
 import React from 'react'
 import GoingContainer from '../containers/GoingContainer'
 import Like from './Like'
+import LikeContainer from '../containers/LikesContainer';
 
 var responseLineStyle = {
     "paddingTop": "20px",
@@ -12,7 +13,7 @@ class PreviewResponses extends React.Component {
         return(
             <div style={responseLineStyle}>
                 <GoingContainer index={this.props.index} />
-                <Like likeText="I like it" />
+                <LikeContainer index={this.props.index} />
             </div>
         )
     }

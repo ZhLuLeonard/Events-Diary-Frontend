@@ -34,7 +34,7 @@ const immEvent1 = fromJS(event0)
 const immEvent2 = fromJS(event2)
 const immEvent3 = fromJS(event3)
 
-console.log(event0.pictureList)
+//console.log(event0.pictureList)
 
 //console.log(immEvent1.getIn(["Info","When"]))
 

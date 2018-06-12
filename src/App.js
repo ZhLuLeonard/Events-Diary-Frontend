@@ -27,10 +27,10 @@ class App extends Component {
   render() {
     var routes = []
     for (var i=0; i<this.props.events.size; i++) {
-      console.log(i)
+      //console.log(i)
       routes.push(i)
     }
-    console.log({routes})
+    //console.log({routes})
     return (
       <Router>
         <div>

@@ -11,8 +11,9 @@ const mapStateToProps = (state,ownprops) => {
     //console.log(ownprops.index)
     //console.log(state.getIn(["EVENTS_ARRAY", ownprops.index]))
     var goingsList = state.getIn(["USERS_ARRAY",state.get("DEFAULT_USER"),"goings"]);
+    //console.log(goingsList.indexOf(ownprops.index))
     return{
-        isGoing: goingsList.indexOf(ownprops.index),
+        isGoing: goingsList.indexOf(ownprops.index)>=0,
         numberGoing: state.getIn(["EVENTS_ARRAY",ownprops.index,"goings"]).size
     }
 }

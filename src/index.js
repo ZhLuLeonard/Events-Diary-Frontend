@@ -11,7 +11,7 @@ import registerServiceWorker from './registerServiceWorker';
 import {event1, event2} from './Abstract/Mock'
 
 const persistedState = loadState();
-const store = createStore(combinedReducers,persistedState,
+const store = createStore(combinedReducers, persistedState,
     composeWithDevTools(
 )
 );

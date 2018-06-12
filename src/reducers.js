@@ -1,5 +1,5 @@
 import { combineReducers } from 'redux'
-import {TYPE_USERNAME, USER_LOGIN, ADD_GOING} from './actions.js'
+import {TYPE_USERNAME, USER_LOGIN, ADD_GOING, ADD_LIKE} from './actions.js'
 import {event0, event2, event3} from './Abstract/Mock'
 import {user1,user2,user3} from './Abstract/Mock'
 import { Map } from 'immutable'
@@ -15,22 +15,33 @@ const initialState = {
 
 const immutableState = fromJS(initialState)
 
-console.log(event0.pictureList)
+//console.log(event0.pictureList)
 
 function combinedReducers(state = immutableState, action) {
     //console.log(state)
     switch(action.type){
         case ADD_GOING:
             var defaultUser = state.getIn(["DEFAULT_USER"])
-            if (state.getIn([defaultUser,"goings"]).indexOf(action.event)<0){
-                var first = state.updateIn([defaultUser,"goings"], List => List.push(action.event))
-                if (state.getIn([action.event,"goings"]).indexOf(defaultUser)<0){
-                    var second = first.updateIn(["EVENTS_ARRAY",action.event,"likes"], List => List.push(state.getIn(["DEFAULT_USER"])))
+            if (state.getIn(["USERS_ARRAY",defaultUser,"goings"]).indexOf(action.event)<0){
+                var first = state.updateIn(["USERS_ARRAY",defaultUser,"goings"], List => List.push(action.event))
+                if (state.getIn(["EVENTS_ARRAY",action.event,"goings"]).indexOf(defaultUser)<0){
+                    var second = first.updateIn(["EVENTS_ARRAY",action.event,"goings"], List => List.push(defaultUser))
                     return second;
                 }
                 return first;
             }
             return state;
+        case ADD_LIKE:
+            var defaultUser = state.getIn(["DEFAULT_USER"])
+                if (state.getIn(["USERS_ARRAY",defaultUser,"likes"]).indexOf(action.event)<0){
+                    var first = state.updateIn(["USERS_ARRAY",defaultUser,"likes"], List => List.push(action.event))
+                    if (state.getIn(["EVENTS_ARRAY",action.event,"likes"]).indexOf(defaultUser)<0){
+                        var second = first.updateIn(["EVENTS_ARRAY",action.event,"likes"], List => List.push(defaultUser))
+                    return second;
+                }
+                return first;
+            }
+        return state;
         case USER_LOGIN:
             for(let i=0; i<state.getIn(["USERS_ARRAY"]).size; i++) {
                 if (state.getIn(["USERS_ARRAY",i,"userName"])===(state.getIn(["USER_NAME"]))){

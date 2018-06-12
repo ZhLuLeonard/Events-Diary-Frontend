@@ -9,7 +9,9 @@ import DetailContentContainer from '../../containers/Detail/DetailContentContain
 import PictureListContainer from '../../containers/Detail/PictureListContainer';
 import DetailWhenContainer from '../../containers/Detail/DetailWhenContainer';
 import DetailWhereContainer from '../../containers/Detail/DetailWhereContainer'
-
+import DetailLikesContainer from '../../containers/Detail/DetailLikesContainer'
+import DetailGoingsContainer from '../../containers/Detail/DetailGoingsContainer'
+import BigButton from '../../components/Detail/BigButton'
 
 var biggerStyle = {
     "position": "relative",
@@ -28,6 +30,9 @@ export default class Detail extends React.Component{
                 <DetailContentContainer className="content" index={this.props.index} />
                 <DetailWhenContainer className="detailWhen" index={this.props.index} />
                 <DetailWhereContainer className="detailWhere" index={this.props.index} />
+                <DetailGoingsContainer className="detailGoings" index={this.props.index} />
+                <DetailLikesContainer className="detailLikes" index={this.props.index} />
+                <BigButton className = "detailButtons" />
                 </div>
             </div>
         )
