@@ -11,7 +11,7 @@ import DetailWhenContainer from '../../containers/Detail/DetailWhenContainer';
 import DetailWhereContainer from '../../containers/Detail/DetailWhereContainer'
 import DetailLikesContainer from '../../containers/Detail/DetailLikesContainer'
 import DetailGoingsContainer from '../../containers/Detail/DetailGoingsContainer'
-import BigButton from '../../components/Detail/BigButton'
+import BigButtonContainer from '../../containers/Detail/BigButtonContainer'
 
 var biggerStyle = {
     "position": "relative",
@@ -20,19 +20,19 @@ var biggerStyle = {
 
 export default class Detail extends React.Component{
     render(){
-        console.log(this.props.index)
+        //console.log(this.props.index)
         return (
             <div className={clas(this.props.className)}>
                 <Headerbanner />
                 <DetailHeader index={this.props.index}/>
                 <div className="contentBox" style={biggerStyle}>
-                <PictureListContainer index={this.props.index} />
-                <DetailContentContainer className="content" index={this.props.index} />
-                <DetailWhenContainer className="detailWhen" index={this.props.index} />
-                <DetailWhereContainer className="detailWhere" index={this.props.index} />
-                <DetailGoingsContainer className="detailGoings" index={this.props.index} />
-                <DetailLikesContainer className="detailLikes" index={this.props.index} />
-                <BigButton className = "detailButtons" />
+                    <PictureListContainer index={this.props.index} />
+                    <DetailContentContainer className="content" index={this.props.index} />
+                    <DetailWhenContainer className="detailWhen" index={this.props.index} />
+                    <DetailWhereContainer className="detailWhere" index={this.props.index} />
+                    <DetailGoingsContainer className="detailGoings" index={this.props.index} />
+                    <DetailLikesContainer className="detailLikes" index={this.props.index} />
+                    <BigButtonContainer className = "detailButtons" index={this.props.index} />
                 </div>
             </div>
         )

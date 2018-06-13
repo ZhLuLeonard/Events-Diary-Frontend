@@ -1,6 +1,6 @@
 import { connect } from 'react-redux'
 import Like from '../components/Like'
-import { addLike } from '../actions'
+import { addLike, removeLike } from '../actions'
 
 const mapStateToProps = (state, ownprops) => {
     var goingsList = state.getIn(["USERS_ARRAY",state.get("DEFAULT_USER"),"likes"]);
@@ -12,7 +12,8 @@ const mapStateToProps = (state, ownprops) => {
 
 const mapDispatchToProps = (dispatch,ownprops) => {
     return {
-        onClick: () => {console.log("hi");dispatch(addLike(ownprops.index))}
+        onClick1: () => {dispatch(addLike(ownprops.index))},
+        onClick2: () => {dispatch(removeLike(ownprops.index))}
     }
 }
 

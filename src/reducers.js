@@ -1,5 +1,5 @@
 import { combineReducers } from 'redux'
-import {TYPE_USERNAME, USER_LOGIN, ADD_GOING, ADD_LIKE} from './actions.js'
+import {TYPE_USERNAME, USER_LOGIN, ADD_GOING, ADD_LIKE, REMOVE_GOING, REMOVE_LIKE} from './actions.js'
 import {event0, event2, event3} from './Abstract/Mock'
 import {user1,user2,user3} from './Abstract/Mock'
 import { Map } from 'immutable'
@@ -20,6 +20,7 @@ const immutableState = fromJS(initialState)
 function combinedReducers(state = immutableState, action) {
     //console.log(state)
     switch(action.type){
+
         case ADD_GOING:
             var defaultUser = state.getIn(["DEFAULT_USER"])
             if (state.getIn(["USERS_ARRAY",defaultUser,"goings"]).indexOf(action.event)<0){
@@ -31,6 +32,7 @@ function combinedReducers(state = immutableState, action) {
                 return first;
             }
             return state;
+
         case ADD_LIKE:
             var defaultUser = state.getIn(["DEFAULT_USER"])
                 if (state.getIn(["USERS_ARRAY",defaultUser,"likes"]).indexOf(action.event)<0){
@@ -42,6 +44,31 @@ function combinedReducers(state = immutableState, action) {
                 return first;
             }
         return state;
+
+        case REMOVE_GOING:
+            var defaultUser = state.getIn(["DEFAULT_USER"])
+                if (state.getIn(["USERS_ARRAY",defaultUser,"goings"]).indexOf(action.event)>=0){
+            var first = state.updateIn(["USERS_ARRAY",defaultUser,"goings"], List => List.delete(List.indexOf(action.event)))
+            if (state.getIn(["EVENTS_ARRAY",action.event,"goings"]).indexOf(defaultUser)>=0){
+                var second = first.updateIn(["EVENTS_ARRAY",action.event,"goings"], List => List.delete(List.indexOf(defaultUser)))
+                return second;
+            }
+            return first;
+        }
+        return state;
+
+        case REMOVE_LIKE:
+            var defaultUser = state.getIn(["DEFAULT_USER"])
+                if (state.getIn(["USERS_ARRAY",defaultUser,"likes"]).indexOf(action.event)>=0){
+            var first = state.updateIn(["USERS_ARRAY",defaultUser,"likes"], List => List.delete(List.indexOf(action.event)))
+            if (state.getIn(["EVENTS_ARRAY",action.event,"likes"]).indexOf(defaultUser)>=0){
+                var second = first.updateIn(["EVENTS_ARRAY",action.event,"likes"], List => List.delete(List.indexOf(defaultUser)))
+                return second;
+            }
+            return first;
+        }
+        return state;
+
         case USER_LOGIN:
             for(let i=0; i<state.getIn(["USERS_ARRAY"]).size; i++) {
                 if (state.getIn(["USERS_ARRAY",i,"userName"])===(state.getIn(["USER_NAME"]))){

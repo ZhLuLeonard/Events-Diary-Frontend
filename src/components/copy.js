@@ -1,1 +1,0 @@
-<defs><style>.cls-1{fill-rule:evenodd;}</style></defs><title>check</title>

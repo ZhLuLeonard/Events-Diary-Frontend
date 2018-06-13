@@ -6,7 +6,7 @@ const mapStateToProps = (state, ownprops) => {
     //console.log(ownprops.index)
     //console.log(state.getIn("EVENTS_ARRAY"))
     //console.log(state.getIn(["EVENTS_ARRAY", ownprops.index]))
-    console.log(state.getIn(["EVENTS_ARRAY", ownprops.index,"pictureList"]))
+    //console.log(state.getIn(["EVENTS_ARRAY", ownprops.index,"pictureList"]))
     return{
     imageList: state.getIn(["EVENTS_ARRAY", ownprops.index,"pictureList"])
 }

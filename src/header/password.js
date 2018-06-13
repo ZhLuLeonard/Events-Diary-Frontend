@@ -9,7 +9,8 @@ export default class Password extends React.Component {
 				    className={cls(this.props.className)}
 					color = "white"
 					placeholder = "Password"
-					type="search"
+					type="password"
+					maxLength="25"
 					value = {this.props.value}
 					onChange = {e => this.props.onChange(e.target.value)}
 					//onChange={e => this.props.onChange(e.target.value)}

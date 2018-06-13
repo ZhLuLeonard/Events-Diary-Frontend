@@ -6,8 +6,8 @@ class DetailWhere extends React.Component {
         return (
             <div>
                 <div >
-                <hr className="markerWhere"/>
-                <div className="where" > Where </div>
+                    <hr className="markerWhere"/>
+                    <div className="where" > Where </div>
                 </div>
                 <div className = "addressName" > {this.props.addressName} </div>
                 <div className = "address" > {this.props.address} </div>

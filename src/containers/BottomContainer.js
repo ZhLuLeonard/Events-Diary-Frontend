@@ -1,5 +1,5 @@
 import {connect} from 'react-redux'
-import Bottom from '../bottom'
+import Bottom from '../Bottom'
 import {userLogin} from '../actions'
 
 

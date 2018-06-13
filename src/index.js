@@ -9,15 +9,19 @@ import AppContainer from './containers/AppContainer';
 import { loadState, saveState } from './middleware/localStorage'
 import registerServiceWorker from './registerServiceWorker';
 import {event1, event2} from './Abstract/Mock'
+import { applyMiddleware } from 'redux'
+import logger from 'redux-logger'
+let _ = require('underscore')
 
 const persistedState = loadState();
 const store = createStore(combinedReducers, persistedState,
     composeWithDevTools(
+        applyMiddleware(logger)
 )
 );
 
 store.subscribe(() => {
-    saveState(store.getState());
+    _.throttle(saveState(store.getState()),100);
 })
 
 ReactDOM.render(

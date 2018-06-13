@@ -1,7 +1,4 @@
-import Event from './Event'
-import Info from './Info'
-import User from './User'
-import Content from './Content'
+
 import {fromJS} from 'immutable'
 
 var pictureList1 = ["/users/luzh/1.png","/users/luzh/2.png","/users/luzh/3.png","/users/luzh/4.png"]

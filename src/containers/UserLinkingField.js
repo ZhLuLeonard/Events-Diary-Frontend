@@ -1,6 +1,6 @@
 import { connect } from 'react-redux'
 import { userSetup } from '../actions.js'
-import Usernames from '../header/username.js';
+import Usernames from '../header/Username.js';
 
 const mapStateToProps = (state) => {
     return{

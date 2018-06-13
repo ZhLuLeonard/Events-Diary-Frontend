@@ -7,7 +7,7 @@ import {
 } from 'react-router-dom'
 
 import './App.css';
-import Headers from './header/header.js'
+import Headers from './header/Header.js'
 import EventsContainer from './containers/EventsContainer'
 import BottomContainer from './containers/BottomContainer'
 import Detail from './components/Detail/Detail'

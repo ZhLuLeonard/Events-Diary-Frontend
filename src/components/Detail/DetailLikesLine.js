@@ -13,7 +13,7 @@ var preLogoStyle = {
 }
 
 var words = {
-    "font-size":"16px",
+    "fontSize":"16px",
     "position": "absolute",
     "left":"25px",
     "top":"2px"
@@ -25,6 +25,7 @@ var hrStyle = {
     "height":"1px",
     "border":"none",
     "background":"#DFDFDF",
+    "marginLeft":"11px"
 }
 
 var likesLineStyle = {
@@ -40,10 +41,10 @@ class DetailLikesLine extends React.Component {
         var iconList = []
         //console.log(this.props.likesList)
         for(var userName of this.props.likesList){
-            console.log(changeUsernameToDirectory(userName))
-            iconList.push(<Icon className="likesIcon" userIconSrc={changeUsernameToDirectory(userName)}/>)
+            //console.log(changeUsernameToDirectory(userName))
+            iconList.push(<Icon key={this.props.likesList.indexOf(userName)} className="likesIcon" userIconSrc={changeUsernameToDirectory(userName)}/>)
         }
-        console.log(iconList)
+        //console.log(iconList)
         return (
             <div>
             <div style={likesLineStyle}>

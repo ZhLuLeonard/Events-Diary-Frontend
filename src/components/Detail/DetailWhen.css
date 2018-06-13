@@ -4,6 +4,7 @@
     width: 300px;
     background: #DFDFDF;
     border:none;
+    margin-left: 11px;
 }
 
 .marker2 {
@@ -85,4 +86,5 @@
     border:none;
     height: 1px;
     width: 300px;
+    margin-left: 11px;
 }

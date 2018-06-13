@@ -1,5 +1,5 @@
 import React from 'react';
-import Password from './password.js';
+import Password from './Password.js';
 
 export default class Passwordfield extends React.Component{
     constructor(props){

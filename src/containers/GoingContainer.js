@@ -1,6 +1,6 @@
 import { connect } from 'react-redux'
 import Going from '../components/Going.js'
-import { addGoing } from '../actions'
+import { addGoing, removeGoing } from '../actions'
 
 function isGoing (list,event) {
     return (list.indexOf(event)!=-1)
@@ -20,7 +20,8 @@ const mapStateToProps = (state,ownprops) => {
 
 const mapDispatchToProps = (dispatch,ownprops) => {
     return {
-        onClick: () => {console.log("hi");dispatch(addGoing(ownprops.index))}
+        onClick1: () => {dispatch(addGoing(ownprops.index))},
+        onClick2: () => {dispatch(removeGoing(ownprops.index))}
     }
 }
 

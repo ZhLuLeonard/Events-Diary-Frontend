@@ -8,7 +8,7 @@ const mapStateToProps = (state, ownprops) => {
     for(var index=0; index<goingsList.size; ++index){
         newList.push(state.getIn(["USERS_ARRAY", goingsList.get(index), "userName"]))
     }
-    console.log(newList)
+    //console.log(newList)
     return {
         numGoing: goingsList.size,
         goingsList: newList

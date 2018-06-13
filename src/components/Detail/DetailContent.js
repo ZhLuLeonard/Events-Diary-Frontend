@@ -3,7 +3,7 @@ import React from 'react'
 var style = {
     "paddingLeft": "15px", 
     "paddingTop":"0px",
-    "font-size": "15px",
+    "fontSize": "15px",
     "position":"relative",
     "width": "290px"
 }

@@ -13,7 +13,7 @@ var preLogoStyle = {
 }
 
 var words = {
-    "font-size":"16px",
+    "fontSize":"16px",
     "position": "absolute",
     "left":"25px",
     "top":"23px"
@@ -26,7 +26,8 @@ var hrStyle = {
     "border":"none",
     "background":"#DFDFDF",
     "bottom":"0px",
-    "paddingBottom":"0px"
+    "paddingBottom":"0px",
+    "marginLeft": "11px"
 }
 
 var goingsLineStyle = {
@@ -41,10 +42,10 @@ class DetailGoings extends React.Component {
         var iconList = []
         //console.log(this.props.likesList)
         for(var userName of this.props.goingsList){
-            console.log(changeUsernameToDirectory(userName))
-            iconList.push(<Icon className="goingsIcon" userIconSrc={changeUsernameToDirectory(userName)}/>)
+            //console.log(changeUsernameToDirectory(userName))
+            iconList.push(<Icon key={this.props.goingsList.indexOf(userName)} className="goingsIcon" userIconSrc={changeUsernameToDirectory(userName)}/>)
         }
-        console.log(iconList)
+        //console.log(iconList)
         return (
             <div>
             <div style={goingsLineStyle}>
